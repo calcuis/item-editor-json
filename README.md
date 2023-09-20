@@ -9,7 +9,7 @@ The items are stored in a JSON file and are loaded into the GUI for easy managem
 Here's a breakdown of the key components and functionalities in the code:
 
 Importing Libraries:
-`- The code imports necessary modules from the tkinter library for GUI components, `ttk` for themed widgets, and other required modules such as `uuid`, `json`, `os`, and `io`.
+- The code imports necessary modules from the tkinter library for GUI components, `ttk` for themed widgets, and other required modules such as `uuid`, `json`, `os`, and `io`.
 
 Global Variables and File Path:
 - Defines a global list variable my_data_list to store item data.
@@ -30,5 +30,5 @@ Event Handling:
 
 Main Execution:
 - Starts the main GUI event loop using `root.mainloop()`.
-- 
+
 Overall, this code creates a simple item editor GUI that interacts with a JSON file to manage itemset data.
