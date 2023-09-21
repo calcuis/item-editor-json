@@ -277,7 +277,7 @@ btnExit=Button(ButtonFrame,text="Exit",padx=20,pady=10,command=root.quit)
 btnExit.pack(side=LEFT)
 
 trv = ttk.Treeview(root,columns=(1,2,3,4,5,6,7),show="headings",height="16")
-trv.grid(row=11,column=0,rowspan=16,columnspan=7)
+trv.grid(row=9,column=0,rowspan=16,columnspan=7)
 
 trv.heading(1,text="id", anchor="center")
 trv.heading(2,text="title", anchor="center")
@@ -297,7 +297,7 @@ trv.bind("<ButtonRelease>",MouseButtonUpCallBack)
 
 scrollbar = Scrollbar(root, orient=VERTICAL, command=trv.yview)
 trv.configure(yscroll=scrollbar.set)
-scrollbar.grid(row=11,rowspan=16,column=7,sticky='ns')
+scrollbar.grid(row=9,rowspan=16,column=7,sticky='ns')
 
 startup_check()
 load_json_from_file()
