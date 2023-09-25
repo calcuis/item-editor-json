@@ -13,7 +13,7 @@ field05 = 'd'
 field06 = 'ans'
 
 def startup_check():
-    if os.path.isfile(FilePath) and os.access(FilePath, os.R_OK):
+    if os.path.isfile(FilePath) and os.access(FilePath,os.R_OK):
         print("File exists and is readable")
     else:
         print("Either file is missing or is not readable, creating file...")
@@ -30,8 +30,8 @@ def load_json_from_file():
 
 def save_json_to_file():
     global my_data_list
-    with open(FilePath, "w") as file_handler:
-        json.dump(my_data_list, file_handler, indent=4)
+    with open(FilePath,"w") as file_handler:
+        json.dump(my_data_list,file_handler,indent=4)
     file_handler.close
     print('File has been written to and closed')
 
@@ -95,10 +95,6 @@ def change_enabled_state(state):
     if state == 'Edit':
         btnUpdate["state"]="normal"
         btnDelete["state"]="normal"
-        btnAdd["state"]="disabled"
-    elif state=='Cancel':
-        btnUpdate["state"]="disabled"
-        btnDelete["state"]="disabled"
         btnAdd["state"]="disabled"
     else:
         btnUpdate["state"]="disabled"
