@@ -199,7 +199,7 @@ def MouseButtonUpCallBack(event):
 
 root = Tk()
 root.title('Item Editor')
-root.geometry("1024x768")
+root.geometry("915x625")
 root.configure(bg='lightgray')
 
 margin = Label(text=" ",bg="lightgray")
@@ -224,19 +224,14 @@ crm_id.grid(row=1, column=1)
 
 crm_title = Entry(input_frame,width=30,borderwidth=2,fg="black",font=('Consolas',14))
 crm_title.grid(row=2, column=1,columnspan=2)
-
 crm_a = Entry(input_frame,width=30,borderwidth=2,fg="black",font=('Consolas',14))
 crm_a.grid(row=3, column=1,columnspan=2)
-
 crm_b = Entry(input_frame,width=30,borderwidth=2,fg="black",font=('Consolas',14))
 crm_b.grid(row=4, column=1,columnspan=2)
-
 crm_c = Entry(input_frame,width=30,borderwidth=2,fg="black",font=('Consolas',14))
 crm_c.grid(row=5, column=1,columnspan=2)
-
 crm_d = Entry(input_frame,width=30,borderwidth=2,fg="black",font=('Consolas',14))
 crm_d.grid(row=6, column=1,columnspan=2)
-
 crm_ans = Entry(input_frame,width=30,borderwidth=2,fg="black",font=('Consolas',14))
 crm_ans.grid(row=7, column=1,columnspan=2)
 
@@ -245,19 +240,14 @@ ButtonFrame.grid(row=8,column=0,columnspan=6)
 
 btnShow=Button(ButtonFrame,text="Print",padx=20,pady=10,command=print_all_entries)
 btnShow.pack(side=LEFT)
-
 btnAdd=Button(ButtonFrame,text="Add",padx=20,pady=10,command=add_entry)
 btnAdd.pack(side=LEFT)
-
 btnUpdate=Button(ButtonFrame,text="Update",padx=20,pady=10,command=update_entry)
 btnUpdate.pack(side=LEFT)
-
 btnDelete=Button(ButtonFrame,text="Delete",padx=20,pady=10,command=delete_entry)
 btnDelete.pack(side=LEFT)
-
 btnClear=Button(ButtonFrame,text="Cancel",padx=18,pady=10,command=cancel)
 btnClear.pack(side=LEFT)
-
 btnExit=Button(ButtonFrame,text="Exit",padx=20,pady=10,command=root.quit)
 btnExit.pack(side=LEFT)
 
