@@ -65,7 +65,7 @@ def clear_all_fields():
     crm_id.configure(text="")
     crm_title.focus_set()
     id_value.set(uuid.uuid4())
-    change_background_color("#FFFFFF")
+    change_background_color("white")
 
 def find_row_in_my_data_list(guid_value):
     global my_data_list
@@ -89,7 +89,6 @@ def change_background_color(new_color):
     crm_b.config(bg=new_color)
     crm_c.config(bg=new_color)
     crm_d.config(bg=new_color)
-    crm_ans.config(bg=new_color)
 
 def change_enabled_state(state):
     if state == 'Edit':
@@ -141,7 +140,7 @@ def add_entry():
     ans = crm_ans.get()
 
     if len(title)==0:
-        change_background_color("#FFB2AE")
+        change_background_color("pink")
         return
 
     process_request('_INSERT_',guid_value,title,a,b,c,d,ans)
@@ -156,7 +155,7 @@ def update_entry():
     ans = crm_ans.get()
 
     if len(title)==0:
-        change_background_color("#FFB2AE")
+        change_background_color("pink")
         return
 
     process_request('_UPDATE_',guid_value,title,a,b,c,d,ans)
@@ -204,36 +203,36 @@ root.configure(bg='lightgray')
 
 margin = Label(text=" ",bg="lightgray")
 margin.grid(row=0,column=0)
-
-input_frame = LabelFrame(root,text='Record',bg="lightgray",font=('Consolas',14))
+input_frame = LabelFrame(root,text='Record',bg="lightgray",font=('Calibri',14))
 input_frame.grid(row=0,column=1,rowspan=7,columnspan=4)
 
-l1 = Label(input_frame,anchor="w",width=24,height=1,relief="ridge",text="id",font=('Consolas',14)).grid(row=1,column=0)
-l2 = Label(input_frame,anchor="w",width=24,height=1,relief="ridge",text=field01,font=('Consolas',14)).grid(row=2,column=0)
-l3 = Label(input_frame,anchor="w",width=24,height=1,relief="ridge",text=field02,font=('Consolas',14)).grid(row=3,column=0) 
-l4 = Label(input_frame,anchor="w",width=24,height=1,relief="ridge",text=field03,font=('Consolas',14)).grid(row=4, column=0)
-l5 = Label(input_frame,anchor="w",width=24,height=1,relief="ridge",text=field04,font=('Consolas',14)).grid(row=5,column=0)
-l6 = Label(input_frame,anchor="w",width=24,height=1,relief="ridge",text=field05,font=('Consolas',14)).grid(row=6,column=0)
-l7 = Label(input_frame,anchor="w",width=24,height=1,relief="ridge",text=field06,font=('Consolas',14)).grid(row=7, column=0)
+l1 = Label(input_frame,anchor="w",width=18,height=1,relief="ridge",text="id",font=('Calibri',14)).grid(row=1,column=0)
+l2 = Label(input_frame,anchor="w",width=18,height=1,relief="ridge",text=field01,font=('Calibri',14)).grid(row=2,column=0)
+l3 = Label(input_frame,anchor="w",width=18,height=1,relief="ridge",text=field02,font=('Calibri',14)).grid(row=3,column=0) 
+l4 = Label(input_frame,anchor="w",width=18,height=1,relief="ridge",text=field03,font=('Calibri',14)).grid(row=4, column=0)
+l5 = Label(input_frame,anchor="w",width=18,height=1,relief="ridge",text=field04,font=('Calibri',14)).grid(row=5,column=0)
+l6 = Label(input_frame,anchor="w",width=18,height=1,relief="ridge",text=field05,font=('Calibri',14)).grid(row=6,column=0)
+l7 = Label(input_frame,anchor="w",width=18,height=1,relief="ridge",text=field06,font=('Calibri',14)).grid(row=7, column=0)
 
 id_value = StringVar()
 id_value.set(uuid.uuid4())
 
-crm_id = Label(input_frame, anchor="w", height=1,relief="ridge", textvariable=id_value, font=('Consolas',14))
-crm_id.grid(row=1, column=1)
+crm_id = Label(input_frame,anchor="w",height=1,width=68,relief="ridge",textvariable=id_value,font=('Calibri',14))
+crm_id.grid(row=1,column=1)
 
-crm_title = Entry(input_frame,width=30,borderwidth=2,fg="black",font=('Consolas',14))
-crm_title.grid(row=2, column=1,columnspan=2)
-crm_a = Entry(input_frame,width=30,borderwidth=2,fg="black",font=('Consolas',14))
-crm_a.grid(row=3, column=1,columnspan=2)
-crm_b = Entry(input_frame,width=30,borderwidth=2,fg="black",font=('Consolas',14))
-crm_b.grid(row=4, column=1,columnspan=2)
-crm_c = Entry(input_frame,width=30,borderwidth=2,fg="black",font=('Consolas',14))
-crm_c.grid(row=5, column=1,columnspan=2)
-crm_d = Entry(input_frame,width=30,borderwidth=2,fg="black",font=('Consolas',14))
-crm_d.grid(row=6, column=1,columnspan=2)
-crm_ans = Entry(input_frame,width=30,borderwidth=2,fg="black",font=('Consolas',14))
-crm_ans.grid(row=7, column=1,columnspan=2)
+crm_title = Entry(input_frame,width=68,borderwidth=2,font=('Calibri',14))
+crm_title.grid(row=2,column=1,columnspan=2)
+crm_a = Entry(input_frame,width=68,borderwidth=2,font=('Calibri',14))
+crm_a.grid(row=3,column=1,columnspan=2)
+crm_b = Entry(input_frame,width=68,borderwidth=2,font=('Calibri',14))
+crm_b.grid(row=4,column=1,columnspan=2)
+crm_c = Entry(input_frame,width=68,borderwidth=2,font=('Calibri',14))
+crm_c.grid(row=5,column=1,columnspan=2)
+crm_d = Entry(input_frame,width=68,borderwidth=2,font=('Calibri',14))
+crm_d.grid(row=6,column=1,columnspan=2)
+crm_ans = ttk.Combobox(input_frame,width=66,font=('Calibri',14))
+crm_ans['values'] = ("a", "b", "c", "d")
+crm_ans.grid(row=7,column=1,columnspan=2)
 
 ButtonFrame = LabelFrame(root,text='',bg="lightgray",font=12)
 ButtonFrame.grid(row=8,column=0,columnspan=6)
