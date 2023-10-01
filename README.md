@@ -1,5 +1,5 @@
 ## item editor (non-relational DB)
-Enter each item for compiling an item bank (i.e., a group of multiple choice questions) and save it as json format.
+Enter each item for compiling an item bank (i.e., a group of multiple choice questions) and save it as JSON format.
 
 ## code review
 This Python code defines a graphical user interface (GUI) application using the tkinter library for managing and editing items.
