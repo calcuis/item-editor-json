@@ -1,4 +1,4 @@
-## item editor
+## item editor (json - nonrelational DB)
 Enter each item for compiling an item bank (i.e., a group of multiple choice questions) and save it as json format.
 
 ## code review
